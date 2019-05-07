@@ -1,0 +1,322 @@
+/*Собственно основной цвет страницы*/
+html,body{
+    height: 100%;
+    background-color: #aaa;
+}
+/*Верхняя навигацилонна панель*/
+.navbar {
+    position: relative;
+    margin-bottom: 0;
+    height: 90px;
+}
+/*Цвет верхней навигационной панели*/
+.navbar-default{
+    background-color: #d8d8d8;
+    min-height: 90px;
+}
+/*Лого и его параметры*/
+#brand_image{
+    height: 75px;
+    width: 150px;
+    margin-top: -13px;
+}
+/*Какой-то невероятный фикс                                                           TODO: нормальное описание*/
+#header_сontainer{
+    margin-top: 20px;
+}
+/*Страндартный цвет надписей в шапке страниц*/
+.navbar-default .navbar-nav > li > a{
+    color: #000;
+}
+/*Параметры холдера логотипа*/
+.navbar-brand {
+    padding: unset;
+    position: absolute;
+    left: 50%;
+    margin-left: -75px !important;
+}
+
+/*Параметры которые вступают в силу только при определенных параметрах*/
+@media only screen and (max-width: 767px) {
+    .navbar-brand{
+        position: static;
+        left: 48%;
+        margin-left: 50px !important;
+    }
+    #collapse-1{
+    	margin-top: 20px;
+    }
+    #left_dropdown{
+    	text-align: right;
+    }
+    #fuckMylife{
+        width: 100%;
+    }
+}
+/*Параметры которые вступают в силу только при определенных параметрах*/
+@media only screen and (min-width: 768px){
+ 	#left_dropdown{
+    	text-align: left;
+    }
+    .navbar-right{
+        margin-right: unset;
+    }
+    #contact_icons{
+        height: 8em;
+    }
+    #fuckMylife{
+        width: 54%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #materials_image{
+        padding-right: 100px;
+    }
+}
+#IamOk{
+    width: 100%;
+}
+
+/*Параметры свернутого меню*/
+#collapse-1{
+    font-size: 15px;
+}
+/*Позиция логотипа при малых разрешениях экрана*/
+.navbar-center{
+    margin: 0 auto;
+    display: table;
+}
+
+/*Кнопки в шапке сайта*/
+.navbar-nav{
+    background-color: transparent;
+    text-align: right;
+}
+
+/*Цвет выбранного в выпадающем меню пункта*/
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .dropdown-menu > li > a:focus,
+.navbar-default .navbar-nav .dropdown-menu > li > a:hover{
+    background-color: #fff;
+}
+
+/*Параментры выпадающего окна*/
+.dropdown-menu{
+	background-color: #B5DC22;
+	text-align:right;
+	border-radius: 0;
+	right: 0;
+	min-width: 200px;
+}
+
+/*Цвет кнопок при наведении на них*/
+.navbar-nav > li:hover{
+	background-color: #91B747;
+}
+
+/*Начало анимации открытия свернутого меню*/
+.navbar-collapse.collapse{transition: height .5s;}
+.navbar-collapse.collapsing{height: 0 !important;}
+.navbar-collapse.collapse.in{max-height: none;height: 100vh;}
+.navbar-toggle {border: none;background: transparent !important;}
+.navbar-toggle:hover{background: transparent !important;}
+.navbar-toggle .icon-bar{width: 22px;transition: all 0.2s;}
+.navbar-toggle .top-bar{transform: rotate(45deg);transform-origin: 10% 10%;}
+.navbar-toggle .middle-bar{opacity: 0;}
+.navbar-toggle .bottom-bar{transform: rotate(-45deg);transform-origin: 10% 90%;}
+.navbar-toggle.collapsed .top-bar {transform: rotate(0);}
+.navbar-toggle.collapsed .middle-bar {opacity: 1;}
+.navbar-toggle.collapsed .bottom-bar {transform: rotate(0);}
+/*Конец анимации открытия свернутого меню*/
+
+/*Размер шрифта выпадающих окон*/
+.navbar .dropdown-menu a {
+    font-size: 1.5rem;
+}
+
+/*Красивости для всех рядов*/
+.row{
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+/*Параметры всех каруселей*/
+#my_carousel{
+    width: 100%;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+/*небольшой фикс всех колонок                                   НЕ МЕНЯТЬ!!!*/
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, 
+.col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, 
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, 
+.col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, 
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, 
+.col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, 
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, 
+.col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+/*Кастомные параметры плиток*/
+.thumbnail {
+    display: block;
+    padding: 3px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    border: 0px solid #ddd;
+    border-radius: 0px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+/*Низ сайта*/
+footer{
+    background-color: #d8d8d8;
+    position: relative;
+    height: 40px;
+    clear:both;
+    bottom: 0;
+}
+/*Настройки текста футера*/
+#footer_text{
+    padding-top: 12px;
+}
+
+/*Кастомный холдер для свего содержимиого*/
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/*Параметры большой кнопки (огромная крастная на первой странице)*/
+.btn.btn-lg{
+    font-size: 2rem;
+}
+
+/*Параметры красивого холдера для объектов*/
+.container .jumbotron,
+.container-fluid .jumbotron{
+    border-radius: 0;
+    margin-bottom: 5px;
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/*Параметры красивого холдера для объектов*/
+.jumbotron{
+
+}
+
+/*Параметры конкретной кнопки при наведении на нее*/
+.btn-outline-danger.active,.btn-outline-danger:active,.btn-outline-danger:active:focus,.btn-outline-danger:focus,.btn-outline-danger:hover {
+ border-color:#F00F!important;
+ background-color: #F00F!important;
+ color:#fff!important
+}
+
+/*Контактная информация на стартовой странице*/
+#contact_icons{
+    background-color: #939393;
+    font-size: 18px;
+    margin: 3px 5px;
+    height: 7em;
+}
+
+/*Размер иконок с картинками*/
+#glyphicon_icons{
+    font-size: 30px;
+}
+
+/*Это плиточки и в галерее и на Index*/
+.img-thumbnail{
+    object-fit: cover;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    width: 100%;
+}.thumb{
+    margin-top: .3em;
+}
+
+#caruser_fixer{
+    width: 100%;
+}
+#map {
+    height: 100%;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
+/*
+.btn-secondary 
+{
+    background-color: #FF000DB6 !important;
+}/**/
+/*#left_dropdown{text-align: left;}/**/
+
+/********************************************************************************************************
+*********************************************************************************************************
+*********************************************************************************************************
+*********************************************************************************************************
+*********************************************************************************************************
+*****************************************ХЗ ЧТО ЭТО******************************************************
+*********************************************************************************************************
+*********************************************************************************************************
+*********************************************************************************************************
+*********************************************************************************************************
+*********************************************************************************************************
+*********************************************************************************************************
+**********************************************************************************************************/
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover 
+{
+    color: #555;
+    background-color: #91B747FF;
+}
+.navbar-default .navbar-toggle 
+{
+    border-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar 
+{
+    background-color: #000;
+}
+.input-group .bootstrap-select.form-control 
+{
+    z-index: inherit;
+}
+
+#image-gallery.modal-footer
+{
+    display: block;
+}
+
+#effects_item{
+  height: 7em;/**/
+}
+.effect_icons{
+   margin-top: 30px;/**/
+}
+.effect_text{
+    text-align: left;
+    margin-top: 18px;
+}
+.my_hr{
+    color:#FF0000;
+    height: 2px;
+    background-color:#FF0000;
+    border-top: none;
+}
+
+.text-hide{
+    color:transparent;
+}
