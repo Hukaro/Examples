@@ -8,6 +8,7 @@ public class AllInDeckCards
     public Texture cardImage;
 }
 [RequireComponent(typeof(DragAndDrop))]
+
 public class GameController : MonoBehaviour
 {
     [SerializeField]

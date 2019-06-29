@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    GameController GC = new GameController();
+    GameController GC;
     private void Start()
     {
         if (!GetComponent<GameController>())
